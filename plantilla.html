@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{payload.name_request}}</title>
+    <style>
+        /* Estilo para quitar el borde de la fila deseada */
+        .sin-borde th, .sin-borde td {
+            border: none;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px 0;
+            font-size: 15px;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Ajusta el último valor para cambiar la opacidad (0 es transparente, 1 es opaco) */
+        }
+
+       
+    </style>
+    
+</head>
+<body> 
+
+    <!-- <div style="float: right;"> -->
+        <br>
+        <br>
+        <TABLE BORDER style="float: right; border-spacing: 0px; border-collapse: collapse; border-width: 1px; border-style: solid;">
+            <TR class="sin-borde">
+                <TH style="text-align: center; font-size: 0.75em;" colspan="2">{{payload.name_request}}</TH>
+            </TR>
+            <TR style="font-size: 0.8em;">
+                <TD style="padding-left: 10px; padding-right: 10px;">Código: {{payload.code}}</TD>
+                <TD style="padding-left: 10px; padding-right: 10px;">Fecha: {{payload.date_creation}}</TD>
+            </TR>
+            <TR style="font-size: 0.8em;">
+                <TD style="padding-left: 10px; padding-right: 10px;">Revisión:</TD>
+                <TD style="padding-left: 10px; padding-right: 10px;">Página: 1 de 1</TD>
+            </TR>
+        </TABLE>
+    <!-- </div> -->
+    
+    <!-- <TABLE BORDER="1">
+        <TR>
+            <TD>A</TD> <TD>B</TD> <TD>C</TD>
+        </TR>
+        <TR>
+            <TD>D</TD> <TD>E</TD> <TD>F</TD>
+        </TR>
+    </TABLE> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>{{payload.formatted_date}}</p>
+    <br>
+    <br>
+    <p>Señores</p>
+    <p>{{payload.full_name_admin}}</p>
+    <p>Jefe de área de Recursos Humanos</p>
+    <p>Ciudad. -</p>
+    <br>
+    <br>
+    <h2 style="margin: 0 auto; text-align: center; font-size: 15.5px; text-transform: uppercase;">{{payload.name_request}}</h2>
+    <br>
+    <br>
+    <div style="font-family: 'Times New Roman', Times, serif; text-align: justify;">
+    <p>Yo, <strong>{{payload.last_name}} {{payload.first_name}}</strong> con C.C. <strong>{{payload.identification}}</strong>, laborando en el área de <strong>{{payload.area}}</strong>, 
+    con el cargo de <strong>{{payload.position}}</strong>, me dirijo a usted para solicitar <strong>{{payload.name_request}}</strong> Debido a: <strong>{{payload.reason}}</strong></p>
+    <p>Agradezco de antemano su atención y colaboración en este proceso. Quedo a disposición para cualquier información adicional o aclaración que considere pertinente.</p>
+    <p>Sin más, me despido cordialmente deseándole éxitos continuos en sus funciones y agradeciendo la consideración de mi solicitud.</p>
+    </div>
+    <br>
+    <br>
+    <p>Atentamente,</p>
+    <br>
+    <br>
+    <p> __________________________ </p>
+    <p>Firma</p>
+    <p>{{payload.last_name}} {{payload.first_name}}</p>
+    <p>{{payload.position}}</p>
+    <p>CC: {{payload.identification}}</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="pageFooter" style="border-top: 1px solid #ddd; padding-top: 5px;">
+        <p style="color: #666; width: 70%; margin: 0; padding-bottom: 5px; text-align: let; font-family: sans-serif; font-size: .65em; float: left;"><a href="https://anartz-mugika.com" target="_blank">https://anartz-mugika.com</a></p>
+        <p style="color: #666; margin: 0; padding-bottom: 5px; text-align: right; font-family: sans-serif; font-size: .65em">Página {{page}} de {{pages}}</p>
+    </div>
+</body>
+</html>

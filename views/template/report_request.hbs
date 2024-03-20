@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"/>
+  <title>Reporte</title>
+  <style>
+    body {
+      margin: 20px;
+      position: relative;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid #000;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      width: 25%;
+      text-align: center;
+      vertical-align: top;
+      border: 2px solid #000;
+      padding: 0.3em;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    caption {
+      padding: 0.3em;
+    }
+
+    #bottomRight {
+      background-color: #e3f6f5;
+    }
+    
+    .parrafo {
+      display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+    }
+    
+    footer{
+      padding-top: 15px; 
+    }
+    
+    .totalSolicitudes {
+      text-align: right;
+      margin-top: -10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h4 class="parrafo">
+    Fecha:
+  </h4>
+  
+  <p class="parrafo">
+    {{payload.formatted_date}}
+  </p>
+  
+   <div></div>
+  
+  <h4 class="parrafo">
+    Hora: 
+  </h4>
+  
+  <p class="parrafo">
+    {{payload.hour}}
+  </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2 style="margin: 0 auto; text-align: center; font-size: 15.5px; text-transform: uppercase;">Reporte de Solicitudes Generadas</h2>
+ 
+  <table class="default">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <tr>
+      <td colspan="2" id="bottomRight">Reporte de Solicitudes Generadas</td>
+    </tr>
+    <tr>
+      <th>Total solicitudes aprobadas</th>
+      <td>{{payload.report.total_requests_accepted}}</td>
+    </tr>
+    <tr>
+      <th>Total solicitudes pendientes</th>
+      <td>{{payload.report.total_requests_earring}}</td>
+    </tr>
+    <tr>
+      <th>Total solicitudes rechazadas</th>
+      <td>{{payload.report.total_requests_rejected}}</td>
+    </tr>
+     <tr>
+      <th class="totalSolicitudes">Total solicitudes:</th>
+      <td id="bottomRight">{{payload.report.total_requests}}</td>
+    </tr>
+  </table>
+
+  <div id="pageFooter" style="border-top: 1px solid #ddd; padding-top: 550px;">
+    <p style="color: #666; width: 70%; margin: 0; padding-bottom: 5px; text-align: let; font-family: sans-serif; font-size: .65em; float: left;">VIAPP S.A</p>
+    <p style="color: #666; margin: 0; padding-bottom: 5px; text-align: right; font-family: sans-serif; font-size: .65em">Página 1 de 1</p>
+</div>
+  
+
+</body>
+
+</html>

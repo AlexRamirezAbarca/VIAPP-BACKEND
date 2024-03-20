@@ -1,0 +1,106 @@
+<div
+	style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; background-color: #f4f4f4; border-radius: 10px;">
+	{{!-- <h2 style="color: #007bff;">Bienvenido/a</h2> --}}
+	<p style="color: #1e2836;">Hola <strong>{{first_name}} {{last_name}}</strong>,</p>
+	<p style="color: #1e2836;">Te damos la bienvenida a nuestro servicio. Estamos emocionados de tenerte con nosotros.</p>
+	<p style="color: #1e2836;">Tus datos de acceso son los siguientes:</p>
+	{{!-- <p style="color: #1e2836;">
+		<strong>Correo electrónico:</strong> {{email}}
+	</p> --}}
+	<p style="color: #1e2836;">
+		<strong>Usuario:</strong> {{user_name}}
+	</p>
+	<p style="color: #1e2836;">
+		<strong>Contraseña:</strong> {{password}}
+	</p>
+	<p style="color: #1e2836;">
+		Si tienes algún problema o duda, nuestro equipo de soporte podrá ayudarte.
+	</p>
+	<p style="color: #1e2836; font-weight: bold;">
+		Saludos,
+	</p>
+	<p style="color: #1e2836;">
+		Tu equipo de soporte
+	</p>
+</div>
+{{!-- <tr>
+	<td style="padding: 20px 30px" colspan="5">
+		<br>
+		<br>
+		<span style="font-size: 16px; color: #03619f;">
+			<strong>Hola {{first_name}} {{last_name}}.</strong>
+			<br><br>
+		</span>
+		<span style="font-size: 14px; color: #1e2836;">
+			Te informamos hemos creado tu usuario en nuestra plataforma, a partir de este momento podrás utilizar todos
+			sus servicios.
+			<br>
+			<br>
+			<strong>Tus datos de acceso son los siguientes:</strong>
+			<br>
+			<br>
+		</span>
+		<span style=" color: #03619f;">
+			<strong>Correo electrónico:</strong>
+		</span> {{email}}
+		<br>
+		<span style=" color: #03619f;">
+			<strong>Usuario:</strong>
+		</span> {{user_name}}
+		<br>
+		<span style=" color: #03619f;">
+			<strong>Contraseña:</strong>
+		</span> {{password}}
+		<br>
+		<br>
+
+		<span style="font-size: 14px; color: #1e2836;">
+			Si tienes algún problema o duda, nuestro equipo de soporte podrá ayudarte.
+		</span>
+		<div>
+			{{#if urlWeb }}
+			{{#if urlAppAndroid}}
+			<br>
+			<span style="font-size: 14px; color: #1e2836; font-weight: bold;">
+				Puedes ingresar a la web guardias haciendo click en el siguiente enlace:
+			</span>
+			<br>
+			<br>
+			<a href="{{{urlWeb}}}">{{urlWeb}}</a>
+			<br>
+			<br>
+			<span style="font-size: 14px; color: #1e2836; font-weight: bold;">
+				Descargar la App de Guardias:
+			</span>
+			<br>
+			<br>
+			<a href="{{{urlAppAndroid}}}"><img src="cid:play_store" style="width: 140px; high: 100px"></a>
+			<a href="{{{urlAppIos}}}"><img src="cid:app_store" style="width: 140px; high: 100px"></a>
+			{{/if}}
+			{{/if}}
+			{{#unless urlAppAndroid}}
+			<br>
+			<span style="font-size: 14px; color: #1e2836; font-weight: bold;">
+				Puedes ingresar a la web guardias haciendo click en el siguiente enlace:
+			</span>
+			<br>
+			<br>
+			<a href="{{{urlWeb}}}">{{urlWeb}}</a>
+			{{/unless}}
+
+			{{#unless urlWeb}}
+			<br>
+			<span style="font-size: 14px; color: #1e2836; font-weight: bold;">
+				Descargar la App de Guardias:
+			</span>
+			<br>
+			<br>
+			<a href="{{{urlAppAndroid}}}"><img src="cid:play_store" style="width: 140px; high: 100px"></a>
+			<a href="{{{urlAppIos}}}"><img src="cid:app_store" style="width: 140px; high: 100px"></a>
+			{{/unless}}
+		</div>
+		<span style="font-size: 14px; color: #1e2836; font-weight: bold;"><br><br>
+			Saludos,
+		</span>
+	</td>
+</tr> --}}
